@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Electron Demo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="toast-container"></div>
+  <main class="container">
+    <h1>Electron Demo</h1>
+    <p class="subtitle">一个简单的 Electron 桌面应用示例</p>
+
+    <section class="card">
+      <h2>Greet - 调用主进程</h2>
+      <form class="row" id="greet-form">
+        <input id="greet-input" placeholder="输入你的名字..." />
+        <button type="submit">Greet</button>
+      </form>
+      <p id="greet-msg" class="result"></p>
+    </section>
+
+    <section class="card">
+      <h2>系统信息 - 从主进程获取</h2>
+      <button id="sysinfo-btn">获取系统信息</button>
+      <div id="sysinfo-result" class="result"></div>
+    </section>
+
+    <section class="card">
+      <h2>计算器 - 主进程计算</h2>
+      <div class="calc-row">
+        <input id="calc-a" type="number" placeholder="数字 A" />
+        <select id="calc-op">
+          <option value="+">+</option>
+          <option value="-">-</option>
+          <option value="*">×</option>
+          <option value="/">/</option>
+        </select>
+        <input id="calc-b" type="number" placeholder="数字 B" />
+        <button id="calc-btn">=</button>
+      </div>
+      <p id="calc-result" class="result"></p>
+    </section>
+
+    <section class="card">
+      <h2>文件对话框 - Electron Dialog</h2>
+      <button id="dialog-btn">选择文件</button>
+      <p id="dialog-result" class="result"></p>
+    </section>
+
+    <section class="card">
+      <h2>通知 - Electron Notification</h2>
+      <button id="notify-btn">发送通知</button>
+    </section>
+  </main>
+  <script src="renderer.js"></script>
+</body>
+</html>
